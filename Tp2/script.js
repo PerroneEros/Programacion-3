@@ -77,3 +77,24 @@ botonOcultar.addEventListener("click", () => {
     });
 });
 
+//------------Punto4----------------
+if(texto !== ""){
+    var li = document.createElement("li");
+    li.textContent = texto + " ";
+
+    li.addEventListener("click",function() {
+        li.classList.toggle("completado");
+    });
+
+    var btnEliminar = document.createElement("button");
+    btnEliminar.textContent= "Eliminar";
+    btnEliminar.onclick =  function(){
+        lista.removeChild(li)
+
+    };
+
+    li.appendChild(btnEliminar);
+    lista.appendChild(li);
+    input.value = "";
+}
+//---------FINAL-----

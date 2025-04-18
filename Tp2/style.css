@@ -6,3 +6,7 @@
 .oculto {
     display: none;
 }
+.completado {
+    text-decoration: line-through;
+    color:gray;
+}
