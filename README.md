@@ -23,3 +23,8 @@ Nuestra organizacion del proyecto fue de esta manera:
 
 - `galeria_Benamo`: Galería de imágenes
 
+## 🚀 Cómo ejecutar el proyecto
+
+```bash
+https://github.com/PerroneEros/Programacion-3.git
+```
