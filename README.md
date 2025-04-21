@@ -42,5 +42,5 @@ https://github.com/PerroneEros/Programacion-3.git
 
 Antes de clonar el repo tener instalado en tu computadora:
 
-- 👾 Visual Studio (IDE recomendado) ---> [Instalr VS](https://code.visualstudio.com/download)
+- 👾 Visual Studio Code (IDE recomendado) ---> [Instalr VSCode](https://code.visualstudio.com/download)
 - 🛠️ Git para poder clonar el repositorio desde la terminal o consola ---> [Instalar GIT](https://git-scm.com/downloads)
