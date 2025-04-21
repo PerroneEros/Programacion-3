@@ -12,6 +12,14 @@ Este repositorio contiene el proyecto del TP°1 de la materia **Programación 3*
 ├── img/
 │ └── galeria/ └──
 ```
+
+### Tecnologías del proyecto
+
+```css
+Html, Css y JavaScript
+```
+
+
 ## 👨‍💻 Dev Team
 Nuestra organizacion del proyecto fue de esta manera:
 
