@@ -38,9 +38,8 @@ Nuestra organizacion del proyecto fue de esta manera:
 ```bash
 https://github.com/PerroneEros/Programacion-3.git
 ```
-⚠️ Requisitos previos:
- Antes de clonar el repo tener instalado en tu computadora:
+#### ⚠️ Requisitos previos:
+Antes de clonar el repo tener instalado en tu computadora:
 
 🧠 Visual Studio (recomendado)
-
 🛠️ Git para poder clonar el repositorio desde la terminal o consola
