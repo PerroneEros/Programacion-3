@@ -13,3 +13,13 @@ Este repositorio contiene el proyecto del TP°1 de la materia **Programación 3*
 │ └── galeria/ └──
 ```
 ## 👨‍💻 Dev Team
+Nuestra organizacion del proyecto fue de esta manera:
+
+- ``home_Franco``: Desarrollo de la página principal
+
+- `cards_Fausto`: Componente de cards de productos
+
+- ``contacto_Eros``: Sección de contacto
+
+- `galeria_Benamo`: Galería de imágenes
+
