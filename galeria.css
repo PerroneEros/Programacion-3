@@ -1,0 +1,436 @@
+
+/* General */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background-color: #111;
+    color: white;
+}
+
+.ir-arriba {
+    display: none;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 20%;
+}
+
+.Navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.Navbar a {
+    position: relative;
+    text-decoration: none;
+    padding: 5px 0;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.Navbar ul li {
+    list-style: none;
+}
+
+.Navbar ul li i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.icon-dark-mode {
+    margin-left: auto;
+    top: auto;
+}
+
+.Navbar a::before,
+.Navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff4d00;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.Navbar a::before {
+    bottom: 0;
+    transform-origin: left;
+}
+
+.Navbar a::after {
+    bottom: -5px;
+    transform-origin: right;
+}
+
+.Navbar a:hover {
+    color: #ff4d00;
+}
+
+.Navbar a:hover::before,
+.Navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Front Page */
+.slider-container {
+    width: 80%;
+    height: 33vh;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slide ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 400%;
+    height: 100%;
+    animation: slide 15s infinite cubic-bezier(0.55, 0.48, 0.37, 0.92);
+}
+
+.slide ul li {
+    list-style: none;
+    width: 100%;
+}
+
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-texto {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    z-index: 10;
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+/* Main Content */
+.content.home {
+    flex-grow: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.content.home p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.botones a {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff4d00;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botones a:hover {
+    background-color: #cc3c00;
+}
+
+/* Estilos de la galería */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.caja {
+    position: relative;
+    background-color: #ffffff;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out, background-color 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    will-change: transform;
+}
+
+.caja:hover {
+    transform: scale(1.05);
+}
+
+.caja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.Boton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.caja:hover .Boton {
+    opacity: 1;
+}
+
+/* Modal mejorado */
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 0.4s;
+    z-index: 9999;
+}
+
+.modal-content {
+    padding: 20px;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.modal-content h3 {
+    margin-top: 20px;
+}
+
+.modal-content p {
+    margin: 20px 0;
+}
+
+.modal-img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+}
+
+.modal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.close-btn a {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+}
+
+.close-btn a:hover {
+    color: red;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal:target .modal-content {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+}
+
+/* Animación modal */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        height: auto;
+    }
+}
+/* MODO OSCURO */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .grid-layout {
+    background-color: #000000;
+    color: white;
+}
+
+.dark-mode .caja {
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .Boton {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+}
+
+.dark-mode .form-container {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dark-mode form {
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    color: white;
+    box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+.dark-mode label {
+    color: #ddd;
+}
